@@ -1,6 +1,6 @@
 //Icons need to search in google=> (https://icons8.com/icons)
 
-import React from 'react'
+import React, { useContext } from 'react'
 import "./leftBar.scss";
 import Friends from "../../assets/Friends.png";
 import Market from "../../assets/Market.png";
@@ -15,15 +15,19 @@ import Messages from "../../assets/Messages.png";
 import Fundraiser from "../../assets/Fundraiser.png";
 import Tutorials from "../../assets/Tutorials.png";
 import Courses from "../../assets/Courses.png";
+import { AuthContext } from '../../context/authContextProvider';
 
 export default function LeftBar() {
+
+  const{ currentUser} = useContext(AuthContext);
+
   return (
     <div className='leftbar'>
       <div className="container">
         <div className="menu">
           <div className="user">
-            <img src="https://images.pexels.com/photos/7550294/pexels-photo-7550294.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
-            <span>Manipal S</span>
+            <img src={currentUser.ProfilePif} alt="" />
+            <span>{currentUser.name}</span>
           </div>
 
           <div className="item">

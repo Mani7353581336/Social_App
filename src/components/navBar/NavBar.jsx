@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./navBar.scss";
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
@@ -8,9 +8,13 @@ import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../context/authContextProvider';
 
 
 export default function NavBar() {
+
+  const{ currentUser} = useContext(AuthContext);
+
   return (
     <div className='navbar'>
       <div className="left">
@@ -30,8 +34,8 @@ export default function NavBar() {
         <EmailOutlinedIcon />
         <NotificationsOutlinedIcon />
         <div className="user">
-          <img src="https://images.pexels.com/photos/7550294/pexels-photo-7550294.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
-          <span>Manipal S</span>
+          <img src={currentUser.ProfilePif} alt="" />
+          <span>{currentUser.name}</span>
         </div>
       </div>
 
