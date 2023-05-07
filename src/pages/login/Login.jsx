@@ -5,9 +5,9 @@ import './login.scss';
 
 export default function Login() {
 
-    const{ login } = useContext(AuthContext);
+    const { login } = useContext(AuthContext);
 
-    const handleLogin=()=>{
+    const handleLogin = () => {
         login()
     }
     return (
@@ -16,12 +16,12 @@ export default function Login() {
                 <div className="left">
                     <h1>Hello World</h1>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                         Ad, asperiores nihil cupiditate, omnis molestiae suscipit 
-                         accusantium  
-                         </p>
+                        Ad, asperiores nihil cupiditate, omnis molestiae suscipit
+                        accusantium
+                    </p>
                     <span>Don't you have an account!</span>
                     <Link to="/register">
-                    <button>Register</button>
+                        <button>Register</button>
                     </Link>
                 </div>
 

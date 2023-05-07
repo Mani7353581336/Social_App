@@ -1,3 +1,5 @@
+@import "..//../style.scss";
+
 .navbar {
     display: flex;
     align-items: center;
@@ -9,6 +11,9 @@
     position: sticky;
     top: 0;
     background-color: white;
+
+    // Home scrolling under the Navbar
+    z-index: 999;
 
     .left {
         display: flex;
@@ -32,6 +37,10 @@
             input {
                 border: none;
                 width: 500px;
+
+                @include mobile{
+                    display: none;
+                }
             }
         }
     }
@@ -40,6 +49,10 @@
         display: flex;
         align-items: center;
         gap: 20px;
+
+        @include mobile{
+            display: none;
+        }
 
         .user {
             display: flex;
@@ -55,9 +68,7 @@
                 object-fit: cover;
             }
 
-            span {
-
-            }
+           
         }
     }
 }

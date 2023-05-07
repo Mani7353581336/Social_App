@@ -11,7 +11,7 @@ export default function Register() {
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, asperiores nihil cupiditate, omnis molestiae suscipit accusantium  </p>
                     <span>Don't you have an account!</span>
                     <Link to="/login">
-                    <button>Login</button>
+                        <button>Login</button>
                     </Link>
                 </div>
 

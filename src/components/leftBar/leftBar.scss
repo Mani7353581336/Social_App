@@ -1,6 +1,7 @@
 .leftbar {
     flex: 2;
 
+    //LeftBar scrolling under the navbar
     position: sticky;
     top: 70px;
     height: calc(100vh - 70px);
